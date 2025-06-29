@@ -1,0 +1,23 @@
+<Window x:Class="uiApp.VideoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="ういビーム"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Width="300" Height="300"
+        ShowInTaskbar="False"
+        Topmost="True"
+        WindowStartupLocation="Manual"
+        Left="1600" Top="700"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Grid Background="Transparent">
+        <MediaElement Name="VideoPlayer"
+                      Source="ui.mp4"
+                      LoadedBehavior="Play"
+                      UnloadedBehavior="Stop"
+                      Stretch="Uniform"
+                      IsHitTestVisible="False"
+                      MediaEnded="VideoPlayer_MediaEnded" />
+    </Grid>
+</Window>
